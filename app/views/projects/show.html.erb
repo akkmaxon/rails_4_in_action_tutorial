@@ -1,4 +1,9 @@
 <% title(@project.name, "Projects") %>
-<h2><%= @project.name %></h2>
-<%= link_to "Edit Project", edit_project_path(@project) %>
-<%= link_to "Delete Project", @project, method: :delete, data: { confirm: 'No, please!?!!' } %>
+<header>
+  <h1><%= @project.name %></h1>
+
+  <ul class="actions">
+    <li><%= link_to "Edit Project", edit_project_path(@project), class: 'edit' %></li>
+    <li><%= link_to "Delete Project", @project, method: :delete, data: { confirm: 'No, please!?!!' }, class: 'delete' %></li>
+  </ul>
+</header>
