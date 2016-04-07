@@ -4,6 +4,7 @@ RSpec.feature "Users can view tickets" do
   before do
     author = FactoryGirl.create(:user)
     vim = FactoryGirl.create(:project, name: "Vim editor")
+    assign_role!(author, :viewer, vim)
     FactoryGirl.create(:ticket, 
 		       project: vim, 
 		       author: author,
@@ -15,6 +16,7 @@ RSpec.feature "Users can view tickets" do
 		       author: author,
 		       name: "Standards compliance",
 		       description: "Isn't a joke.")
+    login_as(author)
     visit "/"
   end
 
