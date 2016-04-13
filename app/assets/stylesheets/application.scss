@@ -99,4 +99,12 @@ body {
     @extend .form-control;
   }
 }
-//from admin/users partial
+
+//from tickets partial
+.state {
+  @extend .label;
+  font-size: 12px;
+  padding: 0.3em 0.6em;
+}
+//from tickets partial
+
