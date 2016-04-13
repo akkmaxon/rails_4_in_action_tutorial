@@ -7,4 +7,8 @@ class State < ActiveRecord::Base
   def to_s
     name
   end
+
+  def self.default
+    find_by(default: true)
+  end
 end
