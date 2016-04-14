@@ -26,7 +26,7 @@ gem 'simple_form'
 gem 'devise'
 gem 'pundit'
 gem 'carrierwave'
-
+gem 'searcher', github: 'radar/searcher'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
