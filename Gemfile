@@ -27,6 +27,7 @@ gem 'devise'
 gem 'pundit'
 gem 'carrierwave'
 gem 'searcher', github: 'radar/searcher'
+gem 'fog', group: :production
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
