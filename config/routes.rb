@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root "projects#index"
+
   namespace :admin do
     root 'application#index'
     resources :projects, only: [:new, :create, :destroy]
@@ -14,8 +16,14 @@ Rails.application.routes.draw do
     end
   end
 
+  namespace :api do
+    resources :projects, only: [] do
+      resources :tickets
+    end
+  end
+
   devise_for :users
-  root "projects#index"
+
   resources :projects, only: [:index, :show, :edit, :update] do
     resources :tickets do
       collection do
@@ -26,6 +34,7 @@ Rails.application.routes.draw do
       end
     end
   end
+
   resources :tickets, only: [] do
     resources :comments, only: :create
     resources :tags, only: [] do
@@ -34,5 +43,6 @@ Rails.application.routes.draw do
       end
     end
   end
+
   resources :attachments, only: [:show, :new]
 end
