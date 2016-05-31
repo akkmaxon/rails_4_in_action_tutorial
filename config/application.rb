@@ -17,6 +17,9 @@ Bundler.require(*Rails.groups)
 
 module Ticketee
   class Application < Rails::Application
+    # If you want to use LinkJumbler middleware uncomment next two lines
+    #require "link_jumbler"
+    #config.middleware.use LinkJumbler, { "e" => "a" }
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
