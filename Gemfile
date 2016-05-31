@@ -15,6 +15,7 @@ gem 'pundit'
 gem 'carrierwave'
 gem 'searcher', github: 'radar/searcher'
 gem 'active_model_serializers'
+gem 'sinatra'
 
 group :development, :test do
   gem 'sqlite3'
